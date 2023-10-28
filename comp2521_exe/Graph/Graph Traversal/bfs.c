@@ -9,6 +9,11 @@
     // • First-in-first-out data structure
     // • Stores unvisited vertices in the order that they should be visited
 
+// BFS is O(V + E) when using the adjacency list representation:
+// • Typical queue implementation has O(1) enqueue and dequeue
+// • Each vertex is visited at most once ⇒ O(V)
+// • For each vertex, all of its edges are considered once ⇒ O(E)
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -57,6 +62,7 @@ void bfs(Graph g, Vertex src) {
     QueueFree(q);
 }
 
+// finds the shortest path(num of edges) between starting vertex and all other vertices
 void frindPathBfs(Graph g, Vertex src, Vertex dest) {
     bool *visited  = calloc(g->nV, sizeof(bool));
 

@@ -1,3 +1,10 @@
+// Depth-first search is described recursively as:
+// 1 Mark current vertex as visited
+    // -> The first time, this is the starting vertex
+// 2 For each neighbour of the current vertex:
+    // 1 If it has not been visited:
+    // 1 Recursively traverse starting from that vertex
+// The recursion naturally induces backtracking
 
 #include <stdbool.h>
 #include <stdio.h>
