@@ -2,18 +2,6 @@
 // Undirected, unweighted
 // Vertices are given by integers between 0 and V - 1
 
-// Data structures used in BFS:
-// • Visited array
-    // • To keep track of which vertices have been visited
-// • Predecessor array
-    // • To keep track of the predecessor of each vertex
-    // • The predecessor of v is the vertex from which we reached v
-        // • i.e., the vertex before v on the path to v
-// • Queue
-    // • First-in-first-out data structure
-    // • Stores unvisited vertices in the order that they should be visited
-
-
 #include <assert.h>
 #include <stdbool.h>
 #include <stdio.h>
