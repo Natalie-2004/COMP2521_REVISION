@@ -23,9 +23,9 @@ Queue QueueNew(void) {
     Queue q = malloc(sizeof(struct queue));
 
     if (q == NULL) {
-        fprintf(sterr, "error: out of memory");
+        fprintf(stderr, "error: out of memory");
         exit(EXIT_FAILURE);
-    } ]
+    } 
 
     q->head = NULL;
     q->tail = NULL;

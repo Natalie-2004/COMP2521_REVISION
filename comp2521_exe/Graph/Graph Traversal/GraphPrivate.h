@@ -4,6 +4,12 @@
 // Graph.c, this .h file gives them access to graph
 // internals.
 
+// Ordinarily, these structs would be defined in Graph.c,
+// but as I want to separate the BFS and DFS functions
+// into different files instead of storing them all in
+// Graph.c, this .h file gives them access to graph
+// internals.
+
 #ifndef GRAPH_PRIVATE_H
 #define GRAPH_PRIVATE_H
 

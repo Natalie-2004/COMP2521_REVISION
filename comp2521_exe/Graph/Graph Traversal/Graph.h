@@ -2,6 +2,10 @@
 // Undirected, unweighted
 // Vertices are given by integers between 0 and V - 1
 
+// Interface to the Graph ADT
+// Undirected, unweighted
+// Vertices are given by integers between 0 and V - 1
+
 #ifndef GRAPH_H
 #define GRAPH_H
 
