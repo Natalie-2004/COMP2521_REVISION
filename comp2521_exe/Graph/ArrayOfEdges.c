@@ -1,3 +1,5 @@
+// 边集数组
+
 // Implementation of the Graph ADT
 // Undirected, unweighted
 // Vertices are given by integers between 0 and V - 1
