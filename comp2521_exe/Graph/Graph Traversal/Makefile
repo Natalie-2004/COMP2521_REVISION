@@ -1,6 +1,6 @@
 
 CC = clang
-CFLAGS = -Wall -Werror -g -fsanitize=address,leak,undefined
+CFLAGS = -Wall -Werror -g -fsanitize=address,undefined
 
 .PHONY: all
 all: testGraph

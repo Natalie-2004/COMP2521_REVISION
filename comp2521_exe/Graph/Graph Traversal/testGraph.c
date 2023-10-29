@@ -29,9 +29,9 @@ int main(int argc, char *argv[]) {
 
 	bfs(g, 0);
 
-	//findPathBfs(g, 0, 8);
+	findPathBfs(g, 0, 8);
 
-	//dfs(g, 0);
+	dfs(g, 0);
 
 	GraphFree(g);
 }
