@@ -1,12 +1,12 @@
-#COMP2521 REVISION
+# COMP2521 REVISION
 
-##Data Structure
+## Data Structure
 - Trees, Graphs, Hash Tables, Heap, Tries
 
-##Algorithm Analysis
+## Algorithm Analysis
 - Times/Spacess Complexity
 
-##Sorting
+## Sorting
 - Stable Sorting
   If elements being sorted have the same value, then the order of those elements in the unsorted list, is the same in the sorted list.
 
@@ -20,6 +20,6 @@
 **Selection Sort**
 
 
-##Searching Techniques
+## Searching Techniques
 
-##Graph Algorithm
+## Graph Algorithm
