@@ -31,6 +31,7 @@
 
 过程涉及到**递归**。
 
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/walkthroughs/sorting/mergesort.pdf>
 <https://www.dotcpp.com/course/164>
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week02mon-mergesort.pdf>
 

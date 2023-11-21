@@ -3,6 +3,8 @@
 ## Data Structure
 - Trees, Graphs, Hash Tables, Heap, Tries
 
+## Abstract Data Type (ADT)
+
 ## Algorithm Analysis
 - Times/Spacess Complexity
 
