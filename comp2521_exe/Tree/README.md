@@ -9,6 +9,8 @@
 - 最小高度: 在平衡二叉树中，h = log n
 - 深度: 深度是从根节点到该节点的唯一路径上的边的数目。深度为k的二叉树至多有2的k次方-1个结点(k≥1)。
 
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week03wed-bsts.pdf>
+
 基本操作：（create bst/node, free, insert, find）wk4 lab
 
 Define Tree structure:
@@ -26,5 +28,6 @@ Delete the leaves node:
 
 Find the value in the BST which is closest to the given value:
 <img width="949" alt="Screen Shot 2023-11-21 at 19 25 22" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/69d07ce6-bfde-4b3c-a475-cb62dee98616">
+
 
 
