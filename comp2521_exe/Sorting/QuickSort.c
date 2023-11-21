@@ -44,6 +44,7 @@ void quickSort(int *a, int low, int high) {
 
     // 查找完一轮后key值归位, 不用比较一次就互换一次。此时key值将序列分成左右两部分
     a[low] = key;
+    // recursion
     quickSort(a, i, low-1);
     quickSort(a, low+1, j);
 }
