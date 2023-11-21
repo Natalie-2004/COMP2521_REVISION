@@ -1,49 +1,36 @@
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
-
-bool isLessThan(int x1, int x2);
-void moveValue(int array[], int fromInd, int toInd);
-
-void shellSort(int array[], int low, int high) {
-    int gapValues[8] = {701, 301, 132, 57, 23, 10, 4, 1};
-
-    for (int gapIndex = 0; gapIndex < 8; gapIndex++) {
-        int gap = gapValues[gapIndex];
-        int startInd = low + gap;
-        for (int currentIndex = startInd; currentIndex < high; currentIndex++) {
-            int currentValue = array[currentIndex];
-            int targetIndex;
-            for (targetIndex = currentIndex; targetIndex >= startInd && isLessThan(currentValue, array[targetIndex - gap]); targetIndex -= gap) {
-                moveValue(array, targetIndex - gap, targetIndex);
+#include<stdio.h>
+#include<stdlib.h>
+void shellSort(int arr[], int n) {
+    // 初始化间隔gap为数组长度的一半，每次迭代后gap减半，直到gap为0
+    for (int gap = n/2; gap > 0; gap /= 2) {
+        // 从gap开始遍历数组，用于在各个子序列中进行插入排序
+        for (int i = gap; i < n; i++) {
+            // 将当前元素存储在temp中，用于后续插入
+            int temp = arr[i];
+            int j;
+            // 在子序列中进行插入排序
+            for (
+                j = i; 
+                j >= gap && arr[j - gap] > temp; 
+                j -= gap
+            ) {
+                // 将较大的元素向后移动
+                arr[j] = arr[j - gap];
             }
-            array[targetIndex] = currentValue;
+            // 将原始的arr[i]（即temp）插入到正确的位置
+            arr[j] = temp;
         }
     }
 }
 
-bool isLessThan(int x1, int x2) {
-    return x1 < x2;
-}
-
-void moveValue(int array[], int fromInd, int toInd) {
-    array[toInd] = array[fromInd];
-}
-
 int main() {
-    // Example array to be sorted
-    int testArray[] = {5, 3, 1, 2, 4, 6};
-    int arraySize = sizeof(testArray) / sizeof(testArray[0]);
+    int arr[] = {12, 34, 54, 2, 3};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    shellSort(testArray, 0, arraySize);
+    shellSort(arr, n);
 
-    printf("Sorted array: ");
-    for (int i = 0; i < arraySize; i++) {
-        printf("%d ", testArray[i]);
-    }
-    printf("\n");
-
+    printf("Sorted array: \n");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
     return 0;
 }
