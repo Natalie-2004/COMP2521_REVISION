@@ -1,4 +1,4 @@
-##Common Sorting Algorithms Summary
+## Common Sorting Algorithms Summary
 
 **Quick Sort （快速排序）**
 - Unstable
