@@ -1,6 +1,6 @@
 ## Tree Ddata Structures
 
-#### Binary Search Tree 二叉树
+### Binary Search Tree 二叉树
 - Time Complexity: O(log n); Balanced O(n) -> 所有叶节点在同一层（深度）
 - 结构：root（树根）， leaf node（没有孩子的节点）, internal node（至少有一个孩子的结点）
 - Each node has at most 2 children (LEFT and RIGHT)
@@ -27,6 +27,11 @@ using recursion ->
 <img width="939" alt="Screen Shot 2023-11-21 at 19 21 26" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b62c2aa4-69e0-44a5-bc47-7cf54f5985e0">
 
 **Delete the leaves Node:**
+- 如果要删除leave并保证它是平衡二叉树要复杂很多，考虑四种情况
+  1. 直接删除叶子结点-》两边都没有孩子
+  2. 被删除结点没有右子树 -》 用左子树根结点代替
+  3. 被删除结点没有左子树 -》 用右子树根结点代替
+  4. 左右都有孩子
 <img width="934" alt="Screen Shot 2023-11-21 at 19 24 39" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/2d6c8ec8-b583-4862-ac12-d561acc82871">
 
 **Find the value in the BST which is closest to the given value:**
@@ -45,3 +50,5 @@ using recursion ->
 - LeaveOrder 层序遍历： （即逐层地，从左到右访问所有节点）
 **涉及Queue，有Queue.h**
 <img width="900" alt="Screen Shot 2023-11-21 at 19 56 55" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/9e3aea9c-cf85-4256-bc0a-6d50d8a94be9">
+
+### 
