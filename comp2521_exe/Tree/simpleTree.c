@@ -55,6 +55,7 @@ void preorder (Node *node) {
 
 // 中序遍历： 左 -》 根 -》右
 void inorder (Node *node) {
+    // base case:
     if (node != NULL) {
         inorder(node->left);
         printf("%d\n", node->data);
