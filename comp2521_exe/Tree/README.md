@@ -50,3 +50,10 @@ using recursion ->
 - LeaveOrder 层序遍历： （即逐层地，从左到右访问所有节点）
 **涉及Queue，有Queue.h**
 <img width="900" alt="Screen Shot 2023-11-21 at 19 56 55" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/9e3aea9c-cf85-4256-bc0a-6d50d8a94be9">
+
+### Balanced BST 平衡二叉树 -> AVL Tree (in particular)
+- 二叉树要满足每个结点的平衡因子的绝对值（左子树 - 右子树）不大于1才能叫平衡二叉树。
+- 
+- 二叉树旋转（左旋，右旋，左右旋，右左旋） -》 查看ipad笔记
+
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week04mon-balanced-bsts.pdf>
