@@ -53,7 +53,7 @@ using recursion ->
 
 ### Balanced BST 平衡二叉树 -> AVL Tree (in particular)
 - 二叉树要满足每个结点的平衡因子的绝对值（左子树 - 右子树）不大于1才能叫平衡二叉树。
-- 
+- <img width="301" alt="Screen Shot 2023-11-21 at 23 55 24" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/044a4538-1cf4-4ee1-a8d6-bcde174b11f4">
 - 二叉树旋转（左旋，右旋，左右旋，右左旋） -》 查看ipad笔记
 <img width="843" alt="Screen Shot 2023-11-21 at 23 34 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/bea64760-80f8-4cd7-b7d8-a2970992a6f4">
 <img width="843" alt="Screen Shot 2023-11-21 at 23 34 41" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/6da65401-f57b-4d97-a08c-d6488d7db728">
