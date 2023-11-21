@@ -12,8 +12,7 @@
 基本操作：（create bst/node, free, insert, find）wk4 lab
 
 Define Tree structure:
-
-<img width="553" alt="Screen Shot 2023-11-21 at 19 14 45" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/91f11709-0f66-4566-8396-a64e0bcc0b44">
+<img width="904" alt="Screen Shot 2023-11-21 at 19 14 45" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/91f11709-0f66-4566-8396-a64e0bcc0b44">
 
 Counting numbers of Leaves:
 using recursion -> 
