@@ -55,6 +55,8 @@ Order: A, B, D, C, E
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
 
 ### Hamiltonian path && Hamiltonian circuit
+<img width="700" alt="Screen Shot 2023-11-22 at 22 53 36" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/8792c6e9-a14a-4989-935a-647bc6aebe90">
+
 - Hamiltonian path is a path that includes each vertex exactly once.
 - Hamiltonian circuit is a cycle that includes each vertex exactly once. 
 - Determing whehter a graph has above properties needs to use **DFS**
@@ -62,6 +64,8 @@ Order: A, B, D, C, E
     * Worst case O(V!)
 
 ### Euler path && Euler circuit
+<img width="700" alt="Screen Shot 2023-11-22 at 22 54 14" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/0b621de0-3bc6-475a-b225-dde5ed4f5e38">
+
 - Euler path is a path that includes each edge exactly once: 
     * A graph has an Euler path if and only if *exactly zero or two vertices have odd degree*,
     * and all vertices with non-zero degree belong to the *same connected component*.
