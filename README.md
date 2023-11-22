@@ -1,5 +1,8 @@
 # COMP2521 REVISION Outline
 
+LeetCode and HackerRank exercises
+<https://gist.github.com/jedavidson/1a99b8944897d532271fe164d4ce3049>
+
 ## Data Structure
 - Trees, Graphs, Hash Tables, Heap, Tries
 
