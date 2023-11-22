@@ -58,3 +58,25 @@ The recursion naturally induces backtracking
 6. 然后选择 A 的另一个未访问的邻居，例如 C，并递归地访问它。
 7. 继续选择 C 的一个未访问的邻居，例如 E，并递归地访问它。
 Order: A, B, D, C, E
+
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
+
+### Hamiltonian path && Hamiltonian circuit
+- Hamiltonian path is a path that includes each vertex exactly once.
+- Hamiltonian circuit is a cycle that includes each vertex exactly once. 
+- Determing whehter a graph has above properties needs to use **DFS**
+- Time Complexity:
+    * Worst case O(V!)
+
+### Euler path && Euler circuit
+- Euler path is a path that includes each edge exactly once: 
+    * A graph has an Euler path if and only if *exactly zero or two vertices have odd degree*,
+    * and all vertices with non-zero degree belong to the *same connected component*.
+- Euler circuit is a cycle that includes each edge exactly once: 
+    * A graph has an Euler circuit if and only if *every vertex has even degree*,
+    * and all vertices with non-zero degree belong to the *same connected component*. 
+- Determing whehter a graph has above properties needs to use **DFS**
+- Time Complexity for Adj. List:
+    * Finding degree of every vertex O(V + E).
+    * Checking connectivity -> recursion O(V + E).
+    * Worst case in overall O(V + E).
