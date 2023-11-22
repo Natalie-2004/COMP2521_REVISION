@@ -48,7 +48,7 @@
 	* Initialisation O(V^2)
 	* Insert edge O(1)
 	* Delete edge O(1)
-- AD*:
+- ADT:
 <img width="850" alt="Screen Shot 2023-11-22 at 21 11 10" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/52cc3d2d-4673-436c-9a5c-ed3cc24fbfc7">  
 
 #### Adjacency List 邻接表
