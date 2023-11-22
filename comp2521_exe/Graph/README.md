@@ -28,6 +28,7 @@
 ### Graph Basic
 #### Array of Edges 边集数组
 <img width="800" alt="Screen Shot 2023-11-22 at 21 11 52" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/bae70a00-cba2-4da3-a84f-5cecc9946cc2">
+<br>
 - Edges are represented as an array of Edge values (struct containing pairs of Vertices)
 - Space Efficiency
 - Time Complexity: 
