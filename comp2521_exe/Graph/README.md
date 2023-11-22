@@ -27,7 +27,7 @@
 
 ### Graph Basic
 #### Array of Edges 边集数组
-<img width="800" alt="Screen Shot 2023-11-22 at 21 11 52" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/bae70a00-cba2-4da3-a84f-5cecc9946cc2">
+<img width="850" alt="Screen Shot 2023-11-22 at 21 11 52" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/bae70a00-cba2-4da3-a84f-5cecc9946cc2">
 
 - Edges are represented as an array of Edge values (struct containing pairs of Vertices)
 - Space Efficiency
@@ -37,10 +37,11 @@
 	* Delete edge O(E)
 	* Find edge O(log(E)) -> in order
 - ADT:
-<img width="800" alt="Screen Shot 2023-11-22 at 21 11 02" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b1fd4de5-35e1-4e90-a346-2386e9fe0fd7">  
+<img width="850" alt="Screen Shot 2023-11-22 at 21 11 02" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b1fd4de5-35e1-4e90-a346-2386e9fe0fd7">  
 
 #### Adjacency Matrix 邻接矩阵
-<img width="800" alt="Screen Shot 2023-11-22 at 21 12 08" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/15e84345-0e42-4705-ac7d-c3eb5b8c8be8">
+<img width="850" alt="Screen Shot 2023-11-22 at 21 12 08" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/15e84345-0e42-4705-ac7d-c3eb5b8c8be8">
+
 - Edges represented by a V * V matrix
 - If sparse, space is Inefficient
 - Time Complexity:
@@ -48,10 +49,11 @@
 	* Insert edge O(1)
 	* Delete edge O(1)
 - AD*:
-<img width="800" alt="Screen Shot 2023-11-22 at 21 11 10" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/52cc3d2d-4673-436c-9a5c-ed3cc24fbfc7">  
+<img width="850" alt="Screen Shot 2023-11-22 at 21 11 10" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/52cc3d2d-4673-436c-9a5c-ed3cc24fbfc7">  
 
 #### Adjacency List 邻接表
-<img width="800" alt="Screen Shot 2023-11-22 at 21 12 33" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/20b34e08-7780-4290-b87f-b17377af1e95">
+<img width="850" alt="Screen Shot 2023-11-22 at 21 12 33" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/20b34e08-7780-4290-b87f-b17377af1e95">
+
 - For each vertex, store a linked list of adjacent vertices
 - Space Efficient
 - Time complexity:
@@ -59,4 +61,4 @@
 	* Insert Edge O(1)
 	* Delete Edge O(E)
 - ADT:
-<img width="800" alt="Screen Shot 2023-11-22 at 21 11 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/dd8bc228-cf8c-4739-bb7c-c2c73e101f52">  
+<img width="850" alt="Screen Shot 2023-11-22 at 21 11 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/dd8bc228-cf8c-4739-bb7c-c2c73e101f52">  
