@@ -17,7 +17,7 @@ Data structures used in BFS:
     • Stores unvisited vertices in the order that they should be visited
 
 Example:
-<img width="800" alt="Screen Shot 2023-11-22 at 22 52 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/159bed66-1cf7-44f4-a7ab-6439e63d7e1d">
+<img width="600" alt="Screen Shot 2023-11-22 at 22 52 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/159bed66-1cf7-44f4-a7ab-6439e63d7e1d">
 
 1. 将起始顶点 A 加入队列。
 2. 从队列中取出一个顶点，访问它，并将它的所有未访问的邻居加入队列。此时，队列中有 B 和 C。
@@ -41,7 +41,7 @@ Depth-first search is described recursively as:
 The recursion naturally induces backtracking
 
 Example:
-<img width="800" alt="Screen Shot 2023-11-22 at 22 52 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/159bed66-1cf7-44f4-a7ab-6439e63d7e1d">
+<img width="600" alt="Screen Shot 2023-11-22 at 22 52 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/159bed66-1cf7-44f4-a7ab-6439e63d7e1d">
 
 1. 访问 A，并将其标记为已访问。
 2. 选择 A 的一个未访问的邻居，例如 B，并递归地访问它。
