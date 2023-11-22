@@ -38,6 +38,11 @@ using recursion ->
 <img width="949" alt="Screen Shot 2023-11-21 at 19 25 22" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/69d07ce6-bfde-4b3c-a475-cb62dee98616">
 
 **Tree Traversal**
+大部分涉及Recursion 归递
+其实归递 i.e TreeBST(root->left) 本质就是Depth First Search
+从根出发，一直到左子树的叶子结点，停止。
+（如果开头的base case是 !root return root），则马上返回叶子结点。
+
 - PreOrder 顺序遍历： 根 -》 左 -》 右
 <img width="900" alt="Screen Shot 2023-11-21 at 19 52 25" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/bc9e411e-b169-465c-8d8d-13feb112d62d">
 
