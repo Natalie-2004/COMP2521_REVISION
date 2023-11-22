@@ -63,6 +63,8 @@ Order: A, B, D, C, E
 - Determing whehter a graph has above properties needs to use **DFS**
 - Time Complexity:
     * Worst case O(V!)
+<img width="444" alt="Screen Shot 2023-11-22 at 23 04 14" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/83f9cb6f-bcfe-4392-b302-9e54bfbe48ce">
+<img width="442" alt="Screen Shot 2023-11-22 at 23 04 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/0e93e6cd-1143-4f9c-95f5-b6bc8c2d908c">
 
 ### Euler path && Euler circuit
 
@@ -79,3 +81,6 @@ Order: A, B, D, C, E
     * Finding degree of every vertex O(V + E).
     * Checking connectivity -> recursion O(V + E).
     * Worst case in overall O(V + E).
+<img width="477" alt="Screen Shot 2023-11-22 at 23 03 37" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/f8fe9047-3d01-442a-b0a6-dca500ebbee4">
+<img width="342" alt="Screen Shot 2023-11-22 at 23 03 52" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/9e4838e5-c8f7-4659-a8b0-4803bb13715a">
+
