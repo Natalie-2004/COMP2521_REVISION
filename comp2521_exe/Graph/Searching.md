@@ -87,26 +87,25 @@ Example:
 Order: A, B, D, C, E
 
 ```c
-void depthFirst(Graph g, int src) {
-  int *visited = calloc(g->nV,sizeof(int));
+void dfs(Graph g, Vertex src) {
+	bool *visited = calloc(g->nV, sizeof(bool));
+	printf("DFS visit order: ");
+	dfsRec(g, src, visited);
+	printf("\n");
+	free(visited);
+}
 
-  // create a stack and add src to it
-  Stack s = newStack();
-  StackPush(s, src);
+static void dfsRec(Graph g, Vertex v, bool *visited) {
+	printf("%d ", v);
+	visited[v] = true;
 
-  // while the stack is not empty, pop the top vertex off and visit it
-  while (!StackEmpty(s)) {
-    Vertex y, x = StackPop(s);
-
-    if (visited[x]) continue;
-    visited[x] = 1;
-
-    // push all of the neighbors onto the stack if not visited already
-    for (y = g->nV-1; y >= 0; y--) {
-      if (!g->edges[x][y]) continue;
-      if (!visited[y]) StackPush(s,y);
-    }
-  }
+	struct adjNode *curr = g->edges[v];
+	for (; curr != NULL; curr = curr->next) {
+		Vertex w = curr->v;
+		if (!visited[w]) {
+			dfsRec(g, w, visited);
+		}
+	}
 }
 ```
 
