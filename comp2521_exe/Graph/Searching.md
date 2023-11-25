@@ -143,7 +143,10 @@ static void dfsRec(Graph g, Vertex v, bool *visited) {
 
 ### Dijkstra Algorithm
 - Searching the shortest path in a Graph from src to dest
-- Requires Priority Queue
+- It is not necessary require for PQ, but however using it significant improve time efficiency.
+- Time Complexity:
+	- Without Pq: O(V^2)
+	- With Pq: O((V + E) log V)
 - Steps:
     1. Create a set containing every vertex of the graph
     2. Set all distances to Infinity (INT_MAX) and all predecessors to -1, set the source distance to 0
@@ -152,6 +155,7 @@ static void dfsRec(Graph g, Vertex v, bool *visited) {
     5. Update the distance of v
     6. Set the predecessor of v to u
 
+This example doesn't used Pq.
  ```c
 dist[]  // array of cost of shortest path from source
 pred[]  // array of predecessor in shortest path from source
