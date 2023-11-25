@@ -94,3 +94,13 @@ Order: A, B, D, C, E
 <img width="442" alt="Screen Shot 2023-11-22 at 23 03 37" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/f8fe9047-3d01-442a-b0a6-dca500ebbee4">
 <img width="442" alt="Screen Shot 2023-11-22 at 23 03 52" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/9e4838e5-c8f7-4659-a8b0-4803bb13715a">
 
+### Dijkstra Algorithm
+- Searching the shortest path in a Graph from src to dest
+- Requires Priority Queue
+- Steps:
+    1. Create a set containing every vertex of the graph
+    2. Set all distances to Infinity (INT_MAX) and all predecessors to -1, set the source distance to 0
+    3. Visit each vertex (v) from each other current vertex u and:
+    4. If the distance of u +  the distance from u->v is less than the distance of v, then:
+    5. Update the distance of v
+    6. Set the predecessor of v to u
