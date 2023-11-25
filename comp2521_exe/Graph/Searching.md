@@ -187,6 +187,8 @@ function Dijkstra(Graph, source):
 - A tree inside a Graph that has the shorest weighte while walking through every vertices from src to dest
 - Involved Prim's Algo or kruskal's Algo
 
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week07wed-msts.pdf>
+
 **Prim's Algo** - Grow the tree in successive stages
 1. The tree has one vertex as the starting point and no edge initially
 2. In each iteration, find all the edges connect with the targeted vertex i.e the starting vertex
@@ -200,6 +202,9 @@ Analysis:
 	- with set of edges O(E) -> Overall O(E + V)
 	- with Fibonacci heap is O(log (E)) = O(log V) -> Overall O(E + V * log V)
 
+<img width="700" alt="Screen Shot 2023-11-25 at 15 58 05" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/62137b57-20e6-448e-85e2-52358fc13065">
+
+
 **Krustal's Algo** - Maintain a forest all the time
 1. Initially, there are n trees such that every vertex is a tree (Build queue of edges and sort the elements in order)
 2. Each iteration, dequeue and get the edge, check whether the two vertex connected are in the same tree
@@ -207,9 +212,11 @@ Analysis:
 4. At the end, it comes up one complete tree
 
 
-Analsisi:
+Analysis:
 - has at most E iterations
 - sorting edges is O(E * log E)
 - checking if adding edge would form a cycle
 	- cycle chekcing is O(V) -> adj. List.
 	- overall O(E * log E + E * V) = O(E * V)
+
+<img width="600" alt="Screen Shot 2023-11-25 at 15 58 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/ef123a1a-4abe-42aa-ab80-548827da65bc">
