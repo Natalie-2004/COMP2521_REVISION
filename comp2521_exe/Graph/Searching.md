@@ -104,3 +104,30 @@ Order: A, B, D, C, E
     4. If the distance of u +  the distance from u->v is less than the distance of v, then:
     5. Update the distance of v
     6. Set the predecessor of v to u
+
+ ```c
+dist[]  // array of cost of shortest path from source
+pred[]  // array of predecessor in shortest path from source
+
+function Dijkstra(Graph, source):
+
+  vSet = all vertices of Graph
+
+  for each vertex v in Graph:
+    dist[v] = INFINITY
+    pred[v] = -1
+
+  dist[source] = 0
+
+  while vSet is not empty:
+    u = vertex in vSet with min dist[u]
+    remove u from vSet
+
+    for each neighbor v of u:
+      alt = dist[u] + length(u, v)
+      if alt < dist[v]:
+        dist[v] = alt
+        pred[v] = u
+
+  return dist[], pred[]
+```
