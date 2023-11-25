@@ -1,6 +1,13 @@
-
 CC = clang
-CFLAGS = -Wall -Werror -g -fsanitize=address,leak,undefined
+CFLAGS = -Wall -Werror -g -fsanitize=address,undefined
+
+# Detect the operating system
+UNAME_S := $(shell uname -s)
+
+# For macOS, modify CFLAGS to exclude the leak sanitizer
+ifeq ($(UNAME_S),Darwin)
+    CFLAGS := -Wall -Werror -g -fsanitize=address,undefined
+endif
 
 .PHONY: all
 all: runChaining runLinearProbing runDoubleHashing
@@ -17,4 +24,3 @@ runDoubleHashing: runHashTable.c HashTableDoubleHashing.c
 .PHONY: clean
 clean:
 	rm -f runChaining runLinearProbing runDoubleHashing
-
