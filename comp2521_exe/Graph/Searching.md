@@ -36,7 +36,7 @@ Order: A, B, C, D, E
 * Each vertex is visited at most once ⇒ O(V)
 * For each vertex, all of its edges are considered once ⇒ O(E)
 
-### Depth-First Searching (DFS 深度优先搜索
+### Depth-First Searching (DFS) 深度优先搜索
 Depth-first search is described recursively as:
 * Mark current vertex as visited
     - The first time, this is the starting vertex
