@@ -202,7 +202,7 @@ Analysis:
 	- with set of edges O(E) -> Overall O(E + V)
 	- with Fibonacci heap is O(log (E)) = O(log V) -> Overall O(E + V * log V)
 
-<img width="700" alt="Screen Shot 2023-11-25 at 15 58 05" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/62137b57-20e6-448e-85e2-52358fc13065">
+<img width="750" alt="Screen Shot 2023-11-25 at 15 58 05" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/62137b57-20e6-448e-85e2-52358fc13065">
 
 
 **Krustal's Algo** - Maintain a forest all the time
@@ -219,4 +219,4 @@ Analysis:
 	- cycle chekcing is O(V) -> adj. List.
 	- overall O(E * log E + E * V) = O(E * V)
 
-<img width="600" alt="Screen Shot 2023-11-25 at 15 58 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/ef123a1a-4abe-42aa-ab80-548827da65bc">
+<img width="750" alt="Screen Shot 2023-11-25 at 15 58 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/ef123a1a-4abe-42aa-ab80-548827da65bc">
