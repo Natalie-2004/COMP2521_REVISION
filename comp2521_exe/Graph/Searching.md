@@ -36,6 +36,30 @@ Order: A, B, C, D, E
 * Each vertex is visited at most once ⇒ O(V)
 * For each vertex, all of its edges are considered once ⇒ O(E)
 
+```c
+void breadthFirst(Graph g, Vertex src) {
+  int *visited = calloc(g->nV,sizeof(int));
+
+  // create a queue and add the src to it
+  Queue q = newQueue();
+  QueueJoin(q, src);
+
+  // while the queue is not empty, remove the FIFO element from the queue and visit it
+  while (!QueueEmpty(q)) {
+    Vertex y, x = QueueLeave(q);
+
+    if (visited[x]) continue;
+    visited[x] = 1;
+
+    // add each of the neighbors to the queue if not already visited
+    for (y = 0; y < g->nV; y++) {
+      if (!g->edges[x][y]) continue;
+      if (!visited[y]) QueueJoin(q,y);
+    }
+  }
+}
+```
+
 ### Depth-First Searching (DFS) 深度优先搜索
 Depth-first search is described recursively as:
 * Mark current vertex as visited
@@ -61,6 +85,30 @@ Example:
 6. 然后选择 A 的另一个未访问的邻居，例如 C，并递归地访问它。
 7. 继续选择 C 的一个未访问的邻居，例如 E，并递归地访问它。
 Order: A, B, D, C, E
+
+```c
+void depthFirst(Graph g, int src) {
+  int *visited = calloc(g->nV,sizeof(int));
+
+  // create a stack and add src to it
+  Stack s = newStack();
+  StackPush(s, src);
+
+  // while the stack is not empty, pop the top vertex off and visit it
+  while (!StackEmpty(s)) {
+    Vertex y, x = StackPop(s);
+
+    if (visited[x]) continue;
+    visited[x] = 1;
+
+    // push all of the neighbors onto the stack if not visited already
+    for (y = g->nV-1; y >= 0; y--) {
+      if (!g->edges[x][y]) continue;
+      if (!visited[y]) StackPush(s,y);
+    }
+  }
+}
+```
 
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
 
