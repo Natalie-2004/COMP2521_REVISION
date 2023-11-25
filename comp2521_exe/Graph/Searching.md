@@ -182,3 +182,34 @@ function Dijkstra(Graph, source):
 
   return dist[], pred[]
 ```
+
+### Minimum Spanning Tree
+- A tree inside a Graph that has the shorest weighte while walking through every vertices from src to dest
+- Involved Prim's Algo or kruskal's Algo
+
+**Prim's Algo** - Grow the tree in successive stages
+1. The tree has one vertex as the starting point and no edge initially
+2. In each iteration, find all the edges connect with the targeted vertex i.e the starting vertex
+3. And then select the edge with smallest weight and add to the tree
+3. Throughout, maintain the properties of trees such that it is connecting and no cycles.
+
+Analysis:
+- has at most E edges -> O(E)
+- has at most V iteration -> O(V)
+- For each iteration, finding the min weighted edge: O(E + V * E) = O(V * E)
+	- with set of edges O(E) -> Overall O(E + V)
+	- with Fibonacci heap is O(log (E)) = O(log V) -> Overall O(E + V * log V)
+
+**Krustal's Algo** - Maintain a forest all the time
+1. Initially, there are n trees such that every vertex is a tree (Build queue of edges and sort the elements in order)
+2. Each iteration, dequeue and get the edge, check whether the two vertex connected are in the same tree
+3. If not, accept edge into the set -> merging the trees together
+4. At the end, it comes up one complete tree
+
+
+Analsisi:
+- has at most E iterations
+- sorting edges is O(E * log E)
+- checking if adding edge would form a cycle
+	- cycle chekcing is O(V) -> adj. List.
+	- overall O(E * log E + E * V) = O(E * V)
