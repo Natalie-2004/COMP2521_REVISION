@@ -16,7 +16,7 @@
     - left child ind: 2i
     - right child ind: 2i + 1
     - find a node' partents: i/2
-- Differences between Heaps and AVL tree: 1. No strict ordering 2. Represented as array, but but can be thought of as a tree for visualization 
+- Differences between Heaps and AVL tree: 1. No strict ordering as long as the parent value is smaller than two childs sum 2. Represented as array, but but can be thought of as a tree for visualization 
 
 Heap ADT:
 ```c
