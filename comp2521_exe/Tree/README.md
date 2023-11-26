@@ -64,3 +64,16 @@ using recursion ->
 <img width="843" alt="Screen Shot 2023-11-21 at 23 34 41" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/6da65401-f57b-4d97-a08c-d6488d7db728">
 
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week04mon-balanced-bsts.pdf>
+
+### Tries(Prefix Tree) 字典树
+- 一种哈希树的变种, 特点空间换时间
+- Adv: Use the common prefix of the string to reduce query time and minimize unnecessary string comparisons
+- The root node contains no characters, and every node except the root node contains only one character.
+- From the root node to a node, the characters that pass through the path are connected, which is the string corresponding to the node.
+- All children of each node contain different characters.
+- Has Time complexity O(L), the length of string for insertion, search and deletion
+- Has Space O(nR), where n is the total number of characters in all keys, and R is the size of the underlying alphabet (e.g 26)
+
+<img width="800" alt="Screen Shot 2023-11-26 at 14 25 57" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/ffdb0d1d-de7a-465b-8e0e-11553543553d">
+
+<https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week09wed-tries.pdf>
