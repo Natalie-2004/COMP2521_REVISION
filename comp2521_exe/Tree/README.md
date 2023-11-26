@@ -1,4 +1,4 @@
-## Tree Ddata Structures
+## Tree Data Structures
 
 ### Binary Search Tree 二叉树
 - Time Complexity: O(log n); Balanced O(n) -> 所有叶节点在同一层（深度）
