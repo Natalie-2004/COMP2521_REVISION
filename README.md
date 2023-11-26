@@ -38,3 +38,6 @@ LeetCode and HackerRank exercises
 - dfs
 
 ## Graph Algorithm
+- Dijkstra
+- Prim
+- Krustal
