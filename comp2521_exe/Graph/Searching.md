@@ -220,3 +220,36 @@ Analysis:
 	- overall O(E * log E + E * V) = O(E * V)
 
 <img width="750" alt="Screen Shot 2023-11-25 at 15 58 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/ef123a1a-4abe-42aa-ab80-548827da65bc">
+
+*EXE: Checking whether a graph is well connected*
+- In the context of this problem, we will assume a vertex is ‘well connected’ if it has an edge to at least 2 other vertices
+- We will implement this using an adjacency matrix, but the algorithm is similar to an adjacency list, except rather than using another for loop, just iterate over the list per vertex
+```c
+/*
+  Adjacency Matrix implementation
+*/
+int wellConnected(Graph g) {
+  // create an int[] that holds the count of connections per vertex
+  int *connections = calloc(g->nV, sizeof(int));
+
+  // iterate over each vertex, and if an edge between i and j exists, increment
+  // the connection count for i
+  for (int i = 0; i < g->nV; i++) {
+    for (int j = 0; j < g->nV; j++) {
+      if (g->edges[i][j]) {
+        connections[i]++;
+      }
+    }
+  }
+
+  // for each vertex, if the connection count is 2 or more, increment the total
+  // well connected count, and return it
+  int count = 0;
+  for (int i = 0; i < g->nV; i++) {
+    if (connections[i] >= 2) {
+      count++;
+    }
+  }
+  return count;
+}
+```
