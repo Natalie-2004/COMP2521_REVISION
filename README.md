@@ -8,7 +8,37 @@ LeetCode and HackerRank exercises
 
 ## Algorithm Analysis
 - Times/Spacess Complexity
+- main cases: loops recursion functions
+- wrong case: ask 1. how many times does it run 
+- (and then) + 1; (for each) * n
 
+i.e in this case it's O(n)
+```
+int sum = 0;
+for (int i = 0; i < n; i++) {
+  sum += i % 3;
+return sum
+```
+i.e in this case it's O(log n)
+```
+int f2(int n) {
+if n <= 0 {
+  return 0;
+}
+return n + f2(n/3)
+}
+```
+
+``` O(n log n)
+int f3(int n) {
+int count = 0;
+int sum = 0;
+while (count < (n / 2))
+  sum += f2(count)
+  count++
+}
+return sum
+```
 ## Sorting
 - Stable Sorting
   If elements being sorted have the same value, then the order of those elements in the unsorted list, is the same in the sorted list.
