@@ -28,8 +28,8 @@ if n <= 0 {
 return n + f2(n/3)
 }
 ```
-
-``` O(n log n)
+i.e in this case it's O(n log n)
+``` 
 int f3(int n) {
 int count = 0;
 int sum = 0;
