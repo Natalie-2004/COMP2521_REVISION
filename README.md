@@ -11,6 +11,7 @@ LeetCode and HackerRank exercises
 - main cases: loops recursion functions
 - wrong case: ask 1. how many times does it run 
 - (and then) + 1; (for each) * n
+- 一般loop 乘积n的是 log n， n++是n^2
 
 i.e in this case it's O(n)
 ```
