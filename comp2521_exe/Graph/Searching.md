@@ -38,25 +38,38 @@ Order: A, B, C, D, E
 
 ```c
 void breadthFirst(Graph g, Vertex src) {
-  int *visited = calloc(g->nV,sizeof(int));
+  int *predecessor = malloc(g->nV * sizeof(int));
 
   // create a queue and add the src to it
   Queue q = newQueue();
-  QueueJoin(q, src);
 
-  // while the queue is not empty, remove the FIFO element from the queue and visit it
-  while (!QueueEmpty(q)) {
-    Vertex y, x = QueueLeave(q);
-
-    if (visited[x]) continue;
-    visited[x] = 1;
-
-    // add each of the neighbors to the queue if not already visited
-    for (y = 0; y < g->nV; y++) {
-      if (!g->edges[x][y]) continue;
-      if (!visited[y]) QueueJoin(q,y);
-    }
+  for (int i = 0; i < g->nV; i++) {
+	predecessor[i] = -1;
   }
+
+  // set the starting point's predecessor to be marked 
+  predecessor[src] = src;
+  QueueEnqueue(q, src);
+
+  while (QueueSize(q) > 0) {
+		// dequeue vertex v
+		Vertex v = QueueDequeue(q);
+
+		// printf("%d ", v);
+
+		// explore v and its neighbours
+		struct adjNode *curr = g->edges[v];
+		for (; curr != NULL; curr = curr->next) {
+				Vertex w = curr->v;
+				// if this is not yet being visited
+				if (predecessor[w] == -1) {
+					predecessor[w] = v;
+					QueueEnqueue(q,w);
+		}
+   }
+   printf("\n")
+   free(predecessor);
+   QueueFree(q);
 }
 ```
 
