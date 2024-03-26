@@ -73,6 +73,53 @@ void breadthFirst(Graph g, Vertex src) {
 }
 ```
 
+```c
+findPathBfs(Graph g, Vertex src, Vertex dest) {
+	int *predecessor = malloc(g->nV * sizeof(int));
+	Queue q = QueueNew();
+
+	for (int i = 0; i < g->nV; i++) {
+		predecessor[i] = -1;
+	}
+
+	predecessor[src] = src;
+	QueueEnqueue(q, src);
+
+	while (QueueSize(q) > 0) {
+		// dequeue vertex v
+		Vertex v = QueueDequeue(q);
+
+		// explore v
+		struct adjNode *curr = g->edges[v];
+		for (; curr != NULL; curr = curr->next) {
+			Vertex w = curr->v;
+
+			// if w hasn't been visited
+			if (predecessor[w] == -1) {
+				predecessor[w] = v;
+				QueueEnqueue(q, w);
+			}
+		}
+	}
+
+	if (predecessor[dest] != -1) {
+		printf("Path from %d to %d: ", src, dest);
+
+		Vertex curr = dest;
+		while (curr != dest) {
+			printf("%d <- ", curr);
+			curr = predecessor[curr];
+		}
+		printf("%d\n", src);
+	} else {
+		printf("No path from %d to %d\n", src, dest);
+	}
+
+	free(predecessor);
+	QueueFree(q);
+}
+```
+
 <img width="700" alt="Screenshot 2024-03-26 at 12 58 55 pm" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b3310713-5691-411b-a955-a778d052e1ad">
 
 
