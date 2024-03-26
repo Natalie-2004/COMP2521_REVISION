@@ -36,6 +36,8 @@ Order: A, B, C, D, E
 * Each vertex is visited at most once ⇒ O(V)
 * For each vertex, all of its edges are considered once ⇒ O(E)
 
+<img width="700" alt="Screenshot 2024-03-26 at 12 58 55 pm" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b3310713-5691-411b-a955-a778d052e1ad">
+
 ```c
 void breadthFirst(Graph g, Vertex src) {
   	int *predecessor = malloc(g->nV * sizeof(int));
@@ -120,8 +122,6 @@ findPathBfs(Graph g, Vertex src, Vertex dest) {
 }
 ```
 
-<img width="700" alt="Screenshot 2024-03-26 at 12 58 55 pm" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b3310713-5691-411b-a955-a778d052e1ad">
-
 
 ### Depth-First Searching (DFS) 深度优先搜索
 Depth-first search is described recursively as:
@@ -148,6 +148,9 @@ Example:
 6. 然后选择 A 的另一个未访问的邻居，例如 C，并递归地访问它。
 7. 继续选择 C 的一个未访问的邻居，例如 E，并递归地访问它。
 Order: A, B, D, C, E
+
+<img width="700" alt="Screenshot 2024-03-26 at 9 34 20 pm" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/8e44d0ab-68d3-4d5e-aba8-9ce282a4af0e">
+
 
 ```c
 void dfs(Graph g, Vertex src) {
