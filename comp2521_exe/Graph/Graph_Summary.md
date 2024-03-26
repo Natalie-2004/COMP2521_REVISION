@@ -61,4 +61,6 @@
 	* Insert Edge O(1)
 	* Delete Edge O(E)
 - ADT:
-<img width="850" alt="Screen Shot 2023-11-22 at 21 11 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/dd8bc228-cf8c-4739-bb7c-c2c73e101f52">  
+<img width="850" alt="Screen Shot 2023-11-22 at 21 11 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/dd8bc228-cf8c-4739-bb7c-c2c73e101f52">
+
+Note: Vertex v -> indicates the neighbour of the node
