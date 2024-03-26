@@ -181,6 +181,9 @@ static void dfsRec(Graph g, Vertex v, bool *visited) {
 ```c
 bool dfsFindsPath(Graph g, Vertex src, Vertex dest) {
 	bool *visited = calloc(g->nV, sizeof(bool));
+	// The lines are tp replace *visited array, both case works
+	// int *predecessor = malloc(g->nV * sizeof(int));
+	// predecessor[src] = src;
 	bool result = dfsFindsPathRec(g, src, dest, visited);
 	free(visited);
 	return result;
@@ -196,6 +199,8 @@ bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
 	for (; curr != NULL; curr = curr->next) {
 		Vertex w = curr->v;
 		if (!visited[w]) {
+		// if (predecessor[w] == -1) -> predecessor[w] = v;
+
 			// if there's a path from w to the dest,
 			// then means there's a path from v to the dest
 			if (dfsFindsPathRec(g, w, dest, visited)) {
@@ -207,6 +212,7 @@ bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
 	return false;
 }
 ```
+
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
 
 ### Hamiltonian path && Hamiltonian circuit
