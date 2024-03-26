@@ -38,20 +38,20 @@ Order: A, B, C, D, E
 
 ```c
 void breadthFirst(Graph g, Vertex src) {
-  int *predecessor = malloc(g->nV * sizeof(int));
+  	int *predecessor = malloc(g->nV * sizeof(int));
 
-  // create a queue and add the src to it
-  Queue q = newQueue();
+  	// create a queue and add the src to it
+  	Queue q = newQueue();
 
-  for (int i = 0; i < g->nV; i++) {
-	predecessor[i] = -1;
-  }
+	for (int i = 0; i < g->nV; i++) {
+		predecessor[i] = -1;
+	}
+	
+	// set the starting point's predecessor to be marked 
+	predecessor[src] = src;
+	QueueEnqueue(q, src);
 
-  // set the starting point's predecessor to be marked 
-  predecessor[src] = src;
-  QueueEnqueue(q, src);
-
-  while (QueueSize(q) > 0) {
+  	while (QueueSize(q) > 0) {
 		// dequeue vertex v
 		Vertex v = QueueDequeue(q);
 
@@ -66,10 +66,10 @@ void breadthFirst(Graph g, Vertex src) {
 					predecessor[w] = v;
 					QueueEnqueue(q,w);
 		}
-   }
-   printf("\n")
-   free(predecessor);
-   QueueFree(q);
+   	}
+   	printf("\n")
+   	free(predecessor);
+   	QueueFree(q);
 }
 ```
 
