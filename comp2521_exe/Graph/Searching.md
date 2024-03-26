@@ -60,6 +60,9 @@ void breadthFirst(Graph g, Vertex src) {
 }
 ```
 
+<img width="700" alt="Screenshot 2024-03-26 at 12 58 55 pm" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/b3310713-5691-411b-a955-a778d052e1ad">
+
+
 ### Depth-First Searching (DFS) 深度优先搜索
 Depth-first search is described recursively as:
 * Mark current vertex as visited
