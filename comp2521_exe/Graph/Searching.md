@@ -160,7 +160,8 @@ void dfs(Graph g, Vertex src) {
 	printf("\n");
 	free(visited);
 }
-
+```
+```c
 static void dfsRec(Graph g, Vertex v, bool *visited) {
 	printf("%d ", v);
 	visited[v] = true;
@@ -170,11 +171,42 @@ static void dfsRec(Graph g, Vertex v, bool *visited) {
 		Vertex w = curr->v;
 		if (!visited[w]) {
 			dfsRec(g, w, visited);
+
+			// backtrack to v
+			printf("%d ", v);
 		}
 	}
 }
 ```
+```c
+bool dfsFindsPath(Graph g, Vertex src, Vertex dest) {
+	bool *visited = calloc(g->nV, sizeof(bool));
+	bool result = dfsFindsPathRec(g, src, dest, visited);
+	free(visited);
+	return result;
+}
+```
+```c
+bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
+	// check if curr vertex equals to destination
+	if (v == dest) return TRUE;
 
+	visited[v] = true;
+	struct adjNode *curr = g->edges[v];
+	for (; curr != NULL; curr = curr->next) {
+		Vertex w = curr->v;
+		if (!visited[w]) {
+			// if there's a path from w to the dest,
+			// then means there's a path from v to the dest
+			if (dfsFindsPathRec(g, w, dest, visited)) {
+				return true;
+			}
+		}
+	}
+
+	return false;
+}
+```
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
 
 ### Hamiltonian path && Hamiltonian circuit
