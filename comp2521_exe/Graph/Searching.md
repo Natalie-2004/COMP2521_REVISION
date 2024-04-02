@@ -259,7 +259,15 @@ bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
     5. Update the distance of v
     6. Set the predecessor of v to u
 
-This example doesn't used Pq.
+```c
+  while node all nodes have ben visited
+  	find the unvisited vertex v with the smallest dist[v]
+  	mark it as visited
+  	for each edge (v, w, weight) in the graph:
+  		relax along (v, w, weight)
+```
+
+Note: This example doesn't used Pq.
  ```c
 dist[]  // array of cost of shortest path from source
 pred[]  // array of predecessor in shortest path from source
