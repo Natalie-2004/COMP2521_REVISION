@@ -274,25 +274,25 @@ pred[]  // array of predecessor in shortest path from source
 
 function Dijkstra(Graph, source):
 
-  vSet = all vertices of Graph
+	vSet = all vertices of Graph
 
-  for each vertex v in Graph:
-    dist[v] = INFINITY
-    pred[v] = -1
+	for each vertex v in Graph:
+	 	dist[v] = INFINITY
+	    pred[v] = -1
 
-  dist[source] = 0
+  	dist[source] = 0
 
-  while vSet is not empty:
-    u = vertex in vSet with min dist[u]
-    remove u from vSet
+ 	while vSet is not empty:
+	    u = vertex in vSet with min dist[u]
+	    remove u from vSet
 
     for each neighbor v of u:
-      alt = dist[u] + length(u, v)
-      if alt < dist[v]:
-        dist[v] = alt
-        pred[v] = u
+	      alt = dist[u] + length(u, v)
+	      if alt < dist[v]:
+	        	dist[v] = alt
+	        	pred[v] = u
 
-  return dist[], pred[]
+  	return dist[], pred[]
 ```
 
 ### Minimum Spanning Tree
