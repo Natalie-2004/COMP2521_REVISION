@@ -215,7 +215,7 @@ bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
 
 <https://cgi.cse.unsw.edu.au/~cs2521/23T3/lectures/slides/week05mon-graph-traversal.pdf>
 
-### Hamiltonian path && Hamiltonian circuit
+### Hamiltonian path && Hamiltonian circuit -> using dfs
 
 <img width="700" alt="Screen Shot 2023-11-22 at 22 53 36" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/8792c6e9-a14a-4989-935a-647bc6aebe90">
 
@@ -227,7 +227,7 @@ bool dfsFindsPathRec(Graph g, Vertex src, Vertex dest, bool *visited) {
 <img width="442" alt="Screen Shot 2023-11-22 at 23 04 14" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/83f9cb6f-bcfe-4392-b302-9e54bfbe48ce">
 <img width="442" alt="Screen Shot 2023-11-22 at 23 04 29" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/0e93e6cd-1143-4f9c-95f5-b6bc8c2d908c">
 
-### Euler path && Euler circuit
+### Euler path && Euler circuit -> using dfs
 
 <img width="700" alt="Screen Shot 2023-11-22 at 22 54 14" src="https://github.com/Natalie-2004/COMP2521_REVISION/assets/62165943/0b621de0-3bc6-475a-b225-dde5ed4f5e38">
 

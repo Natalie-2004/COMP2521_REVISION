@@ -1,4 +1,3 @@
-
 CC = clang
 CFLAGS = -Wall -Werror
 
@@ -11,7 +10,7 @@ else
 endif
 
 .PHONY: all
-all: cycle components hamiltonianPath eulerianPath
+all: cycle components hamiltonianPath hamiltonianCircuit eulerianPath
 
 cycle: cycle.c Graph.c
 	$(CC) $(CFLAGS) -o cycle cycle.c Graph.c
@@ -22,11 +21,16 @@ components: components.c Graph.c
 hamiltonianPath: hamiltonianPath.c Graph.c
 	$(CC) $(CFLAGS) -o hamiltonianPath hamiltonianPath.c Graph.c
 
+hamiltonianCircuit: hamiltonianCircuit.c Graph.c
+	$(CC) $(CFLAGS) -o hamiltonianCircuit hamiltonianCircuit.c Graph.c
+
 eulerianPath: eulerianPath.c Graph.c
 	$(CC) $(CFLAGS) -o eulerianPath eulerianPath.c Graph.c
+
+eulerianCircuit: eulerianCircuit.c Graph.c
+	$(CC) $(CFLAGS) -o eulerianCircuit eulerianCircuit.c Graph.c
 
 .PHONY: clean
 clean:
 	rm -rf *.dSYM
-	rm -f cycle components hamiltonianPath eulerianPath
-
+	rm -f cycle components hamiltonianPath hamiltonianCircuit eulerianPath eulerianCircuit
