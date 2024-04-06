@@ -41,6 +41,7 @@ static bool dfsHamiltonianPath(Graph g, Vertex v, bool *visited, int numVertices
 	visited[v] = true;
 	numVerticesLeft--;
 
+	// visited v vertexes
 	if (numVerticesLeft == 0) {
 		return true;
 	}
@@ -50,11 +51,15 @@ static bool dfsHamiltonianPath(Graph g, Vertex v, bool *visited, int numVertices
 		Vertex w = curr->v;
 		if (!visited[w]) {
 			if (dfsHamiltonianPath(g, w, visited, numVerticesLeft)) {
+				// if there is a hamiltonian path from that neighbour, return true 
 				return true;
 			}
 		}
 	}
 
+	// if can't find any hamiltonian path, set v back to false
+	// this is important because if dont unvisited,
+	// the graph can't visitng backward to try different path
 	visited[v] = false;
 	return false;
 }
