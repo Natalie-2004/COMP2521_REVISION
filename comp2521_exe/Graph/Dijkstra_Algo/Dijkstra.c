@@ -29,8 +29,10 @@ void Dijkstra(Graph g, Vertex source, int *dist, int *pred) {
 
         // Update dist value of the adjacent vertices of the picked vertex
         for (int v = 0; v < nV; v++) {
-            if (vSet[v] && GraphIsAdjacent(g, u, v) && dist[u] != INT_MAX
-                && dist[u] + 1 < dist[v]) {
+            if (vSet[v] && GraphIsAdjacent(g, u, v) && 
+                dist[u] != INT_MAX && 
+                dist[u] + 1 < dist[v]
+                ) {
                 dist[v] = dist[u] + 1;
                 pred[v] = u;
             }
