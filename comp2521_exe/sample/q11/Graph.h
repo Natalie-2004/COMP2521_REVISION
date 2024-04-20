@@ -9,7 +9,7 @@
 
 typedef struct graph *Graph;
 
-// graph representation (adjacency matrix)
+// graph representation (adjacency matrix) -> use 2d array
 struct graph {
     int nV;            // #vertices
     int numStdEdges;   // #STD_ROAD edges

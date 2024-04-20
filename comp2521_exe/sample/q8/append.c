@@ -11,7 +11,8 @@
 struct node *append(struct node *l1, struct node *l2) {
     // TODO
 
-    
+
     return NULL;
 }
+
 
